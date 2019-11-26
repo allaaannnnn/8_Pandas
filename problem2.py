@@ -2,7 +2,9 @@ import pandas as pd
 
 cars = pd.read_csv('cars.csv')
 
-cars.iloc[[0,5]]
+##Solutions to subproblems are not printed, instead enter to console window.
+
+cars.iloc[0:5,::2]
 
 cars.loc[cars['Model']=='Mazda RX4']
 
