@@ -2,12 +2,12 @@ import pandas as pd
 
 cars = pd.read_csv('cars.csv')
 
-##Solutions to subproblems are not printed, instead enter to console window.
+print(cars.iloc[0:5,::2],'\n')
 
-cars.iloc[0:5,::2]
+print(cars.loc[cars['Model']=='Mazda RX4'],'\n')
 
-cars.loc[cars['Model']=='Mazda RX4']
+print(cars.loc[(cars['Model']=='Camaro Z28'),['cyl']],'\n')
 
-cars.loc[cars['Model']=='Camaro Z28']['cyl']
+print(cars.loc[((cars['Model'] == 'Mazda RX4 Wag') | (cars['Model'] == 'Ford Pantera L') | (cars['Model'] == 'Honda Civic')),['Model','cyl','gear']])
 
-cars.loc[((cars.Model == 'Mazda RX4 Wag') | (cars.Model == 'Ford Pantera L') | (cars.Model == 'Honda Civic')),['Model','cyl','gear']]
+##For sub problem d, the column 'Model' is also printed to determine which models the data cylinders and gear type corresponds to. 
